@@ -12,20 +12,33 @@ class Search extends React.Component {
     }
   }
 
-  handleSubmit(event) {
-    event.preventDefault()
-    const searchInput = event.target.value
-    axios.get(`https://api.deezer.com/search?q=${searchInput}`)
-      .then(res => this.setState({ data: res.data }))
-      .catch(err => console.log(err))
+  handleChange(event) {
+    const userInput = event.target.value
+    this.setState({ searchInput: userInput })
+    console.log(this.state.searchInput)
   }
 
+  handleSubmit(event) {
+    console.log('hello')
+    event.preventDefault()
+    axios.get(`https://cors-anywhere.herokuapp.com/api.deezer.com/search?q=${this.state.searchInput}`)
+      .then((res) => {
+        this.setState({ data: res.data.data })
+        console.log(this.state.data)
+      })
+      .catch(err => console.log(err))
+
+  }
+
+ 
   render() {
     return <section className="section">
       <div className="container">
-        <div className="field has-addons">
+        <form className="field has-addons">
           <div className="control is-expanded">
-            <input onSubmit={(event => this.handleSubmit(event))}
+            <input
+              onChange={(event) => this.handleChange(event)}
+              // onSubmit={(event => this.handleSubmit(event))}
               className="input is-medium"
               type="search"
               placeholder="Artist, Album, Song"
@@ -33,9 +46,13 @@ class Search extends React.Component {
             />
           </div>
           <div className="control">
-            <a className="button is-info is-medium">Search</a>
+            <button type="submit"
+              onClick={(event) => this.handleSubmit(event)}
+              // onKeyPress={(event) => this.handleKeyPress(event)}
+              className="button is-info is-medium">Search
+            </button>
           </div>
-        </div>
+        </form>
       </div>
       <div className="container">
         {/* <NavBar handleSubmit={(event => this.handleSubmit(event))}/> */}
