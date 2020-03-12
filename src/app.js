@@ -8,13 +8,16 @@ import './styles/style.scss'
 import Home from './components/Home'
 // import NavBar from './components/NavBar'
 import Search from './components/Search'
+// import Charts from './components/Charts' 
 
 const App = () => (
   <BrowserRouter>
     {/* <NavBar /> */}
-    <Search/>
+    <Search />
     <Switch>
       <Route exact path="/" component={Home} />
+      <Route path="/search?q=" component={Search} />
+      {/* <Route path="/charts" component={Charts} /> */}
     </Switch>
   </BrowserRouter>
 )

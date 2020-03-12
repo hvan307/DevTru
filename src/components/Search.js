@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+// import Home from './Home'
 // import NavBar from './NavBar'
 
 class Search extends React.Component {
@@ -75,12 +76,10 @@ class Search extends React.Component {
                 <div className="card-content">
                   <p>{track.title}</p>
                 </div>
-                {/* <figure className="playPreview"> */}
-                {/* <ReactAudioPlayer
+                <audio className="playPreview"
                   src={track.preview}
                   controls
-                /> */}
-                {/* </figure> */}
+                />
               </div>
             </div>
           })
