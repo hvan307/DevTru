@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
-import MetisMenu from 'react-metismenu'
-import Search from './Search'
+// import MetisMenu from 'react-metismenu'
+// import Search from './Search'
 
 // const NavBar = props => {
 //   return <header>
@@ -47,7 +47,7 @@ class NavBar extends React.Component {
       <div class="navbar-menu">
         <div class="navbar-start">
           <Link class="navbar-item" to="/">Home</Link>
-          <Link class="navbar-item" to="/">Charts</Link>
+          <Link class="navbar-item" to="/charts">Charts</Link>
 
 
           <div class="navbar-item">
