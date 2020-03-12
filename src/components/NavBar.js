@@ -24,9 +24,15 @@ class NavBar extends React.Component {
     this.setState({ search: event.target.value })
   }
 
+  handleSubmit(event) {
+    event.preventDefault()
+    this.props.history.push('/search', this.state.search)
+    location.reload()
+  }
+
   render() {
     console.log(this.state.search)
-    return <>
+    return <form onSubmit={(event) => this.handleSubmit(event)}>
       <div className="control is-expanded">
         <input
           onChange={(event) => this.handleChange(event)}
@@ -38,9 +44,10 @@ class NavBar extends React.Component {
         />
       </div>
       <div className="control">
-        <Link to={{ pathname: '/search', state: this.state.search }}>submit</Link>
+        {/* <button type="submit"></button> */}
+        {/* <Link to={{ pathname: '/search', state: this.state.search }}>submit</Link> */}
       </div>
-    </>
+    </form>
   }
 
 }
