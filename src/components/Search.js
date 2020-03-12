@@ -19,6 +19,9 @@ class Search extends React.Component {
   }
 
   handleSubmit(event) {
+    if (!this.state.searchInput) {
+      return null
+    }
     console.log('hello')
     event.preventDefault()
     axios.get(`https://cors-anywhere.herokuapp.com/api.deezer.com/search?q=${this.state.searchInput}`)
