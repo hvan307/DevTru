@@ -7,7 +7,8 @@ class SingleArtist extends React.Component {
   constructor() {
     super()
     this.state = {
-      data: {}
+      data: {},
+      trackList: []
     }
   }
 
@@ -20,8 +21,18 @@ class SingleArtist extends React.Component {
         // console.log('history props', this.props.history)
         this.setState({ data: res.data })
       })
+    axios.get(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/top?limit=50`)
+      .then(res => {
+        this.setState({ trackList: res.data.data })
+      })
     // .catch(err => console.log(err))
   }
+
+  // filterTrackList(event) {
+  //   const filteredTrackList = this.state.trackList.filter(elem => {
+
+  //   })
+  // }
 
   render() {
     console.log(this.props)
@@ -44,7 +55,14 @@ class SingleArtist extends React.Component {
                 <p>Number of albums {data.nb_album} {data.nb_album >= 35 ? 'Blimey!' : ''}</p>
               </div>
               <div className="card-content">
-                <p>Tracklist {data.tracklist} </p>
+                <p>Tracklist {this.state.trackList.map((elem, li) => {
+                  return <ul key={li}>
+                    {elem.title}
+                    <audio className="playPreview"
+                      src={elem.preview}
+                      controls
+                    /></ul>
+                })} </p>
               </div>
             </div>
           </div>
