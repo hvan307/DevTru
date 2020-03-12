@@ -6,11 +6,13 @@ import 'bulma'
 import './styles/style.scss'
 
 import Home from './components/Home'
-import NavBar from './components/NavBar'
+// import NavBar from './components/NavBar'
+import Search from './components/Search'
 
 const App = () => (
   <BrowserRouter>
-    <NavBar />
+    {/* <NavBar /> */}
+    <Search/>
     <Switch>
       <Route exact path="/" component={Home} />
     </Switch>

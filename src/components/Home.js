@@ -1,6 +1,8 @@
 import React from 'react'
-import NavBar from './NavBar'
+// import NavBar from './NavBar'
 import axios from 'axios'
+// import ReactAudioPlayer from 'react-audio-player'
+
 
 class Home extends React.Component {
 
@@ -16,7 +18,7 @@ class Home extends React.Component {
       .then(res => {
         this.setState({ data: res.data.tracks.data })
       })
-      // .catch(err => console.log(err))
+    // .catch(err => console.log(err))
   }
 
   render() {
@@ -36,6 +38,15 @@ class Home extends React.Component {
                 <div className="card-content">
                   {track.artist.name}
                 </div>
+                <div className="card-content">
+                  <p>{track.title}</p>
+                </div>
+                {/* <figure className="playPreview"> */}
+                {/* <ReactAudioPlayer
+                  src={track.preview}
+                  controls
+                /> */}
+                {/* </figure> */}
               </div>
             </div>
           })
