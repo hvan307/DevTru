@@ -1,7 +1,6 @@
 import React from 'react'
 // import NavBar from './NavBar'
 import axios from 'axios'
-import ReactAudioPlayer from 'react-audio-player'
 import { Link } from 'react-router-dom'
 
 
@@ -37,7 +36,7 @@ class Home extends React.Component {
                   {track.data}
                 </div>
                 <div className="card-content">
-                  <Link to={`https://cors-anywhere.herokuapp.com/api.deezer.com/artist/${track.artist.name}`}>{track.artist.name}</Link>
+                  <Link to={`/artist/${track.artist.id}`}>{track.artist.name}</Link>
                 </div>
                 <div className="card-content">
                   <p>{track.title}</p>
