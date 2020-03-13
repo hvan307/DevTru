@@ -3,11 +3,11 @@ import React from 'react'
 
 
 const Home = () => {
-  return <section class="hero is-link is-fullheight-with-navbar">
-    <div class="hero-body">
-      <div class="container">
-        <p class="title">
-      </p>
+  return <section className="hero is-link is-fullheight-with-navbar">
+    <div className="hero-body">
+      <div className="container">
+        <p className="title">
+        </p>
       </div>
     </div>
   </section>

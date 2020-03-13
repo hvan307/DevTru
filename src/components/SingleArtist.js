@@ -52,10 +52,12 @@ class SingleArtist extends React.Component {
                 {data.name}
               </div>
               <div className="card-content">
-                <p>Number of albums {data.nb_album} {data.nb_album >= 35 ? 'Blimey!' : ''}</p>
+                <h5>Number of albums</h5>
+                <p>{data.nb_album} {data.nb_album >= 35 ? 'Blimey!' : ''}</p>
               </div>
               <div className="card-content">
-                <p>Tracklist {this.state.trackList.map((elem, li) => {
+                <h5>Tracklist</h5>
+                <p> {this.state.trackList.map((elem, li) => {
                   return <ul key={li}>
                     {elem.title}<br/>
                     <audio className="playPreview"
