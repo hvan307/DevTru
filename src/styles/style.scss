@@ -39,10 +39,10 @@ html{
 background:linear-gradient(rgba(250,0,0,1), transparent);
  background-color:orange;
 //   // font-weight: bold;
-// @media (max-width: 1020px) {
-// background:linear-gradient(rgba(250,0,0,1), transparent);
+@media (max-width: 1020px) {
+background:linear-gradient(rgba(250,0,0,1), orange);
 // background-color:orange;
-// }
+}
 }
 
 .input {
@@ -65,7 +65,7 @@ background:linear-gradient(rgba(250,0,0,1), transparent);
 }
 
 .card-artist-name{
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
   padding-top: 15px;
 }

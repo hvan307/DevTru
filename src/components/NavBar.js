@@ -48,7 +48,7 @@ class NavBar extends React.Component {
         colors={['#448AFF', '#9E9E9E', '#FFEB3B', '#FF5722']}
         style={{ flex: 1 }}
       > */}
-      <div className="navbar-brand">
+      <div className="navbar-brand is-transparent">
         <Link className="navbar-item is-transparent" to="/">
 
           <img src={logo} width="112" height="28" />
@@ -67,10 +67,10 @@ class NavBar extends React.Component {
         </a>
       </div>
 
-      <div className={`navbar-menu is-transparent ${this.state.navMobileOpen ? 'is-active' : ''}`}>
-        <div className="navbar-start is-transparent">
-          <Link className="navbar-item is-transparent" id="home-button" style={{ color: 'black' }} to="/">Home</Link>
-          <Link className="navbar-item is-transparent" id="charts-button" style={{ color: 'black' }} to="/charts">Charts</Link>
+      <div className={`navbar-menu ${this.state.navMobileOpen ? 'is-active' : ''}`}>
+        <div className="navbar-start">
+          <Link className="navbar-item" id="home-button" style={{ color: 'black' }} to="/">Home</Link>
+          <Link className="navbar-item" id="charts-button" style={{ color: 'black' }} to="/charts">Charts</Link>
 
 
           <div className="navbar-item">
