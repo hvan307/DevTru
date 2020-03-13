@@ -33,7 +33,11 @@ class NavBar extends React.Component {
   }
 
   render() {
-    return <nav className="navbar">
+    return <nav className="navbar is-transparent">
+      {/* <LinearGradient
+        colors={['#448AFF', '#9E9E9E', '#FFEB3B', '#FF5722']}
+        style={{ flex: 1 }}
+      > */}
       <div className="navbar-brand">
         <Link className="navbar-item" to="/">
           <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
@@ -48,8 +52,8 @@ class NavBar extends React.Component {
 
       <div className="navbar-menu">
         <div className="navbar-start">
-          <Link className="navbar-item" to="/">Home</Link>
-          <Link className="navbar-item" to="/charts">Charts</Link>
+          <Link className="navbar-item" style={{ color: 'black' }} to="/">Home</Link>
+          <Link className="navbar-item" style={{ color: 'black' }} to="/charts">Charts</Link>
 
 
           <div className="navbar-item">
@@ -72,7 +76,7 @@ class NavBar extends React.Component {
           </div>
         </div>
       </div>
-
+      {/* </LinearGradient> */}
     </nav >
 
   }
