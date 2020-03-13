@@ -1,18 +1,25 @@
-html{
+html, body {
   height: 100vh;
 }
+
 
 .hero-body{
   background-image: url(https://www.ecopetit.cat/wpic/mpic/6-63845_wallpaper-of-colors-dj-wolf-music-background-hd.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  
+  margin-top: 50px;
 }
 
 .navbar{
   background:linear-gradient(rgba(250,0,0,0.5),transparent);
   background-color:orange;
+  position: fixed;
+  width: 100%;
+}
+
+.container{
+  padding: 65px;
 }
 
 #home-button{

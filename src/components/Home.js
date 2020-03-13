@@ -3,7 +3,7 @@ import React from 'react'
 
 
 const Home = () => {
-  return <section className="hero is-link is-fullheight-with-navbar">
+  return <section className="hero is-link is-fullheight">
     <div className="hero-body">
       <div className="container">
         <p className="title">
