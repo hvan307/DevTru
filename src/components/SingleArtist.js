@@ -45,7 +45,7 @@ class SingleArtist extends React.Component {
             <div className="card">
               <div className="album-cover">
                 <figure className="image is-4by3">
-                  <img src={data.picture_medium} alt={data.name} />
+                  <img src={data.picture_xl} alt={data.name} />
                 </figure>
               </div>
               <div className="card-content">
@@ -57,7 +57,7 @@ class SingleArtist extends React.Component {
               <div className="card-content">
                 <p>Tracklist {this.state.trackList.map((elem, li) => {
                   return <ul key={li}>
-                    {elem.title}
+                    {elem.title}<br/>
                     <audio className="playPreview"
                       src={elem.preview}
                       controls

@@ -2,17 +2,34 @@ html{
   height: 100vh;
 }
 
-// .menu {
-//   width: 20vw;
-// }
+.hero-body{
+  background-image: url(https://www.ecopetit.cat/wpic/mpic/6-63845_wallpaper-of-colors-dj-wolf-music-background-hd.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;;
+}
 
+.section{
+  background-color: grey;
+}
 
-// .mainContent {
-//   display: inline-block;
+.card{
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  align-content: center;
+}
+
+// .singleArtistCard{
+//   width: 500px;
+//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 //   text-align: center;
+//   align-content: center;
 // }
 
-// .sideMenu {
-//   display: inline-block;
-// }
-
+audio{
+  width: 220px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 10px;
+}

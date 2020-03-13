@@ -30,7 +30,7 @@ class Charts extends React.Component {
               <div className="card">
                 <div className="album-cover">
                   <figure className="image is-4by3">
-                    <img src={track.album.cover_medium} alt={track.artist.name} />
+                    <img src={track.album.cover_xl} alt={track.artist.name} />
                   </figure>
                   {track.data}
                 </div>
