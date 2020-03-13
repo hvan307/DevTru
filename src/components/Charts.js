@@ -2,7 +2,6 @@ import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-
 class Charts extends React.Component {
 
   constructor() {
@@ -34,7 +33,7 @@ class Charts extends React.Component {
                   </figure>
                   {track.data}
                 </div>
-                <div className="card-content">
+                <div className="card-artist-name">
                   <Link to={`/artist/${track.artist.id}`}>{track.artist.name}</Link>
                 </div>
                 <div className="card-content">

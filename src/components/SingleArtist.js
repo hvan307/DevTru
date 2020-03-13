@@ -44,11 +44,11 @@ class SingleArtist extends React.Component {
           <div className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
             <div className="card">
               <div className="album-cover">
-                <figure className="image is-4by3">
+                <figure className="image is-4by3" id="card-album-cover">
                   <img src={data.picture_xl} alt={data.name} />
                 </figure>
               </div>
-              <div className="card-content">
+              <div className="card-artist-name">
                 {data.name}
               </div>
               <div className="card-content">

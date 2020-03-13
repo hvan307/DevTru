@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
+// import LinearGradient from 'react-native-linear-gradient'
 // import MetisMenu from 'react-metismenu'
 // import Search from './Search'
 
@@ -10,6 +11,7 @@ import { Link, withRouter } from 'react-router-dom'
 //     </nav>
 //   </header>
 // }
+
 
 class NavBar extends React.Component {
 
@@ -31,26 +33,26 @@ class NavBar extends React.Component {
   }
 
   render() {
-    return <nav class="navbar">
-      <div class="navbar-brand">
-        <Link class="navbar-item" to="/">
+    return <nav className="navbar">
+      <div className="navbar-brand">
+        <Link className="navbar-item" to="/">
           <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
         </Link>
 
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
 
-      <div class="navbar-menu">
-        <div class="navbar-start">
-          <Link class="navbar-item" to="/">Home</Link>
-          <Link class="navbar-item" to="/charts">Charts</Link>
+      <div className="navbar-menu">
+        <div className="navbar-start">
+          <Link className="navbar-item" to="/">Home</Link>
+          <Link className="navbar-item" to="/charts">Charts</Link>
 
 
-          <div class="navbar-item">
+          <div className="navbar-item">
             <form onSubmit={(event) => this.handleSubmit(event)}>
               <div className="control is-expanded">
                 <input

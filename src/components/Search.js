@@ -46,7 +46,7 @@ class Search extends React.Component {
                 {/* <div className="card-content">
                   {track.artist.name}
                 </div> */}
-                <div className="card-content">
+                <div className="card-artist-name">
                   <Link to={`/artist/${track.artist.id}`}>{track.artist.name}</Link>
                 </div>
                 <div className="card-content">
