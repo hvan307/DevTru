@@ -24,17 +24,15 @@ class Search extends React.Component {
 
   }
 
-
+  console.log(this.props.location.state)
   render() {
-    // console.log(this.props)
 
     return <section className="section">
 
       <div className="container">
-        {/* <NavBar handleSubmit={(event => this.handleSubmit(event))}/> */}
         <div className="columns is-mobile is-multiline">
           {this.state.data.map((track, key) => {
-            // console.log(this.artist.id)
+            console.log(this.artist.id)
             return <div key={key} className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
               <div className="card">
                 <div className="album-cover">
