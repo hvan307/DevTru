@@ -3,19 +3,6 @@ import { Link, withRouter } from 'react-router-dom'
 
 import logo from '../styles/images/IMGBIN_sound-loudness-png_Tn0RjnUj.png'
 
-// import LinearGradient from 'react-native-linear-gradient'
-// import MetisMenu from 'react-metismenu'
-// import Search from './Search'
-
-// const NavBar = props => {
-//   return <header>
-//     <nav>
-//       div
-//     </nav>
-//   </header>
-// }
-
-
 class NavBar extends React.Component {
 
   constructor() {
@@ -44,17 +31,10 @@ class NavBar extends React.Component {
 
   render() {
     return <nav className="navbar is-transparent">
-      {/* <LinearGradient
-        colors={['#448AFF', '#9E9E9E', '#FFEB3B', '#FF5722']}
-        style={{ flex: 1 }}
-      > */}
       <div className="navbar-brand is-transparent">
         <Link className="navbar-item is-transparent" to="/DevTru">
-
-          <img src={logo} width="112" height="28" />
-
+          <img src={logo} alt='logo' width="112" height="28" />
         </Link>
-
         <a
           role="button"
           className={`navbar-burger burger is-transparent ${this.state.navMobileOpen ? 'is-active' : ''}`} aria-label="menu"
@@ -78,7 +58,6 @@ class NavBar extends React.Component {
               <div className="control is-expanded">
                 <input
                   onChange={(event) => this.handleChange(event)}
-                  // onSubmit={(event => this.handleSubmit(event))}
                   className="input is-medium"
                   type="search"
                   placeholder="Artist, Album, Song"
@@ -86,14 +65,11 @@ class NavBar extends React.Component {
                 />
               </div>
               <div className="control">
-                {/* <button type="submit"></button> */}
-                {/* <Link to={{ pathname: '/search', state: this.state.search }}>submit</Link> */}
               </div>
             </form>
           </div>
         </div>
       </div>
-      {/* </LinearGradient> */}
     </nav >
 
   }
