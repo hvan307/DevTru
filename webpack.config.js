@@ -6,8 +6,8 @@ module.exports = {
   entry: './src/app.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve('dist/bundle.js'),
-    publicPath: 'https://hvan307.github.io/DevTru/' 
+    path: path.resolve('dist'),
+    publicPath: '/' 
   },
   module: {
     rules: [
