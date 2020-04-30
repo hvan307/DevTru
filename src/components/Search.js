@@ -16,7 +16,7 @@ class Search extends React.Component {
 
   componentDidMount() {
     console.log(this.props.location.state)
-    axios.get(`https://api.deezer.com/search?q=${this.props.location.state}`)
+    axios.get(`https://cors-anywhere.herokuapp.com/api.deezer.com/search?q=${this.props.location.state}`)
       .then(res => {
         this.setState({ data: res.data.data })
       })

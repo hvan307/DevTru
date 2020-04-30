@@ -19,7 +19,7 @@ class NavBar extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    this.props.history.push('/search', this.state.search)
+    this.props.history.push('/DevTru/search', this.state.search)
     location.reload()
   }
 
