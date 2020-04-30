@@ -24,7 +24,6 @@ class Search extends React.Component {
 
   }
 
-  console.log(this.props.location.state)
   render() {
 
     return <section className="section">
@@ -62,24 +61,6 @@ class Search extends React.Component {
       </div>
     </section>
   }
-
-  // handleSubmit(event) {
-  //   console.log(event.target.value)
-  //   const searchInput = event.target.value
-  //   this.setState = { searchInput }
-  // }
-
-  // componentDidMount() {
-  //   axios.get(`https://api.deezer.com/search?q=${searchInput}`)
-  //     .then(res => {
-  //       this.setState({
-
-  // render() {
-  //   return <Navbar 
-  //   searchInput={this.state.searchInput}
-  //   onSubmit={(event) => this.handleSubmit(event)} 
-  // }
-
 }
 
 
