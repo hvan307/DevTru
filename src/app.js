@@ -15,7 +15,7 @@ const App = () => (
   <BrowserRouter>
     <NavBar />
     <Switch>
-      <Route exact path="/DevTru" component={Home} />
+      <Route exact path="/" component={Home} />
       <Route exact path="/artist/:id" component={SingleArtist}/>
       <Route path="/search" component={Search} />
       <Route path="/charts" component={Charts} />
