@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/app.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve('./dist/bundle.js'),
+    path: path.resolve('dist'),
     publicPath: 'https://hvan307.github.io/DevTru' 
   },
   module: {
@@ -29,7 +29,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: './index.html',
+      template: 'src/index.html',
       filename: 'index.html',
       inject: 'body'
     })
