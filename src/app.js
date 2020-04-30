@@ -12,7 +12,7 @@ import Charts from './components/Charts'
 import SingleArtist from './components/SingleArtist'
 
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="DevTru">
     <NavBar />
     <Switch>
       <Route exact path="/" component={Home} />
