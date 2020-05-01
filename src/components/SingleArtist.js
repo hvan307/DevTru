@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 class SingleArtist extends React.Component {
@@ -17,7 +16,7 @@ class SingleArtist extends React.Component {
     axios.get(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}`)
       .then(res => {
         // console.log('Single artist is here')
-        // this.props.history.push(`/artist/${id}`)
+        // this.props.history.spush(`/artist/${id}`)
         // console.log('history props', this.props.history)
         this.setState({ data: res.data })
       })

@@ -16,7 +16,6 @@ class Charts extends React.Component {
       .then(res => {
         this.setState({ data: res.data.tracks.data })
       })
-    // .catch(err => console.log(err))
   }
 
   render() {

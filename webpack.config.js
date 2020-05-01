@@ -7,7 +7,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve('dist'),
-    publicPath: 'https://hvan307.github.io/DevTru' 
+    publicPath: '/' 
   },
   module: {
     rules: [
