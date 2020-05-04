@@ -1,4 +1,5 @@
-### ![GA](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) General Assembly, Software Engineering Immersive
+### ![GA](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) 
+General Assembly, Software Engineering Immersive
 # DevTru™
 
 ## Overview
@@ -59,23 +60,57 @@ This endpoint will return the user query results from the Deezer API.
 This endpoint will display the current Top 10 chart hits. Each card contains album cover, artist, album, and song title.
 
 ### NavBar and Search
-``` js
 
-```
 The NavBar and the Search components were no doubt the most challenging elements due to the complexity of having a functional search bar being called and changing state from multiple endpoints. 
 Although it would have been easier to have a separate endpoint with a simple standalone search bar, we felt having search function in the NavBar would ease user experience and provide site continuity.
 
-Initially, we attempted to carry out the search function within the NavBar component. However, due to the asychronous nature of multiple setState, axios was fetching data using an outdated state that was set by the previous user query. 
+Initially, we attempted to carry out the search function within the NavBar component. However, due to the asychronous nature of multiple setState and the complexity of the component as it constisted of a form, burger and both post and get requests, it wasn't performing well. As a result, axios was fetching data using an outdated state that was set by the previous user query. 
 
+To address this issue, we decided to simplify our class component Navbar. We kept the basic navbar elements, as well as the submission form and its handler functions. 
+```js
+class NavBar extends React.Component {
 
-- form
-- passing props
-- axios get
-- burger
+  constructor() {
+    super()
+    this.state = {
+      search: '',
+      navMobileOpen: false
+    }
+  }
+
+  handleChange(event) {
+    this.setState({ search: event.target.value })
+  }
+
+  handleSubmit(event) {
+    event.preventDefault()
+    this.props.history.push('/search', this.state.search)
+    location.reload()
+  }
+```
+We then created a simple class component Search where we would be able to pass the state that was set in the Navbar component using props.location in the axios get request url. This is where the query results are actually being handled, sending a get request to the API endpoint. 
+```js
+class Search extends React.Component {
+
+  constructor() {
+    super()
+    this.state = {
+      data: []
+    }
+  }
+
+  componentDidMount() {
+    axios.get(`https://cors-anywhere.herokuapp.com/api.deezer.com/search?q=${this.props.location.state}`)
+      .then(res => {
+        this.setState({ data: res.data.data })
+      })
+      .catch(err => console.log(err))
+  }
+  ```
+We added location.reload() to handleSubmit() in order to refresh the page content upon query submission, so that the new state is rendered without having to manually refresh the page. 
+
 
 ### Top Charts and Artist Pages
-
-
 
 Our Charts and SingleArtist features were class components in which we set the state via an axios requests, fetching data from Deezer chart and artist endpoints. 
 
