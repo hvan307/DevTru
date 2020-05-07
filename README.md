@@ -20,6 +20,7 @@ This was a 48-hour paired up front-end project that utilised an external API of 
 - Webpack
 - Git and GitHub
 - Bulma, SCSS
+- GitHub Pages
 
 # Approach
 Approaching the project, our first priority was to find a reliable user friendly API. Having settled on a music themed app, we'd narrowed down our API search to Spotify and Deezer. However, the Deezer API proved to be the better option given the streamlined authentication process and clear documentation guidelines.
@@ -177,7 +178,7 @@ In order for the user to play the song previews, we obtained the preview recordi
 ## Lessons Learned
 
 - Deployment
-- Asynchronicity of state
+This was a main learning experience, as our project's navbar search engine is not functional after deploying it to GitHub pages. Even though we were warned of deployment challenges, as often with each project and its eccentricities, some functionalities are compromised, we did not anticipate our main feature to be affected. This goes to show that for projects with time constraints like this, sometimes it's better to focus on creating simple features that will be robust, rather than doing to many things at once. 
 
 ## Other challenges
 We used a Bulma CSS framework for the styling, which proved to be a quick and efficient solution to styling the project, but found it to be fairy restrictive when trying to implement more creative elements.
