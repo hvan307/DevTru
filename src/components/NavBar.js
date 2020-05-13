@@ -11,6 +11,8 @@ class NavBar extends React.Component {
       search: '',
       navMobileOpen: false
     }
+    this.handleSearch = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleChange(event) {
