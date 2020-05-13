@@ -12,13 +12,13 @@ import Charts from './components/Charts'
 import SingleArtist from './components/SingleArtist'
 
 const App = () => (
-  <BrowserRouter basename="DevTru">
+  <BrowserRouter basename="/DevTru">
     <NavBar />
     <Switch>
-      <Route exact path="/" component={Home} />
       <Route exact path="/artist/:id" component={SingleArtist}/>
-      <Route path="/search" component={Search} />
+      <Route path="/search/:search" component={Search} />
       <Route path="/charts" component={Charts} />
+      <Route exact path="/" component={Home} />
     </Switch>
   </BrowserRouter>
 )
