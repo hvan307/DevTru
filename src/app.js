@@ -16,7 +16,7 @@ const App = () => (
     <NavBar />
     <Switch>
       <Route exact path="/artist/:id" component={SingleArtist}/>
-      <Route path="/search/:search" component={Search} />
+      <Route path="/search" component={Search} />
       <Route path="/charts" component={Charts} />
       <Route exact path="/" component={Home} />
     </Switch>
