@@ -1,6 +1,7 @@
 ### ![GA](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) 
 General Assembly, Software Engineering Immersive
 # DevTru™
+![logo](src/styles/images/devtru-logo.png)
 
 ## Overview
 This was a 48-hour paired up front-end project that utilised an external API of choice using React.js. We used a CSS framework Bulma to aid in building this web app. Using the Deezer API we created a music-based app where users could search through thousands of artists, albums and song titles — a not dissimilar concept to Spotify or Deezer. A bonus feature we included was allowing users to stream short 30-second song previews. 
@@ -175,6 +176,11 @@ In order for the user to play the song previews, we obtained the preview recordi
 - Genre-specific top charts
 - Favourite song/artist section
 
+## Wins
+- Having just learnt React, creating a functional search bar in the navbar that is displayed and accessible on all endpoints was more complexed than what I've done so far up to that point in time. Being able to eventually accomplish that was a big win.
+- Another win was our app's bonus feature which allows the user to sample a song preview for 15seconds. Given the amount of time allowed for this project, it was our stretch goal at the start of the project.
+- Creating a responsive design for the app and the burger navbar. 
+
 ## Lessons Learned
 
 - Deployment
@@ -182,3 +188,6 @@ This was a main learning experience, as our project's navbar search engine is no
 
 ## Other challenges
 We used a Bulma CSS framework for the styling, which proved to be a quick and efficient solution to styling the project, but found it to be fairy restrictive when trying to implement more creative elements.
+
+
+
