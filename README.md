@@ -7,10 +7,10 @@ General Assembly, Software Engineering Immersive
 This was a 48-hour paired up front-end project that utilised an external API of choice using React.js. We used a CSS framework Bulma to aid in building this web app. Using the Deezer API we created a music-based app where users could search through thousands of artists, albums and song titles — a not dissimilar concept to Spotify or Deezer. A bonus feature we included was allowing users to stream short 30-second song previews. 
 
 ## Brief
-- Consume a public API – this could be anything but it must make sense for your project.
-- Have several components - At least one classical and one functional.
-- The app should include a router - with several "pages".
-- Be deployed online and accessible to the public.
+- Consume a public API
+- Have several components - At least one classical and one functional
+- The app should include a router - with several "pages"
+- Be deployed online and accessible to the public
 
 ## Technologies Used
 - JavaScript (ES6)
