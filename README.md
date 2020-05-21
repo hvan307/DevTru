@@ -178,7 +178,7 @@ In order for the user to play the song previews, we obtained the preview recordi
 
 ## Wins
 - Having just learnt React, creating a functional search bar in the navbar that is displayed and accessible on all endpoints was more complex than what I had done in class up to that point in time. Being able to eventually accomplish that was a big win.
-- Another win was our app's bonus feature which allows the user to sample a song preview for 15seconds. Given the amount of time allowed for this project, it was our stretch goal at the start of the project.
+- Another win was our app's bonus feature which allows the user to sample a song preview for 30 seconds. Given the amount of time allowed for this project, it was our stretch goal at the start of the project.
 - Creating a responsive design for the app and the burger navbar. 
 
 ## Lessons Learned
